@@ -1,0 +1,17 @@
+.cardImg{
+    height: 20em;
+    width: 15em;
+}
+.cardInfo{
+    font-size: 1.2em;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 15em;
+    min-height: 24em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
+    border: 1px white solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
