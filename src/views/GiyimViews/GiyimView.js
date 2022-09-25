@@ -1,6 +1,11 @@
+import { useState } from 'react';
 import './Giyim.css';
 import PageOne from './PageOne';
+import PageSepet from './PageSepet';
+import PageThree from './PageThree';
+import PageTwo from './PageTwo';
 const GiyimView = () =>{
+  const [pageKey, setPageKey] = useState(2);
   return (
     <>
     <div className="header">
@@ -12,16 +17,19 @@ const GiyimView = () =>{
         BEST - T
         </div>        
         <div className="navBarBtns">
-          <div className='nbBtn'>Yeni</div>
-          <div className='nbBtn'>Erkek</div>
-          <div className='nbBtn'>Kadın</div>
-          <div className='nbBtn'>IC  Giriş  MW</div>
+          <div className='nbBtn' onClick={()=>{setPageKey(1)}}>Yeni</div>
+          <div className='nbBtn' onClick={()=>{setPageKey(2)}}>Erkek</div>
+          <div className='nbBtn' onClick={()=>{setPageKey(3)}}>Kadın</div>
+          <div className='nbBtnIcon' onClick={()=>{setPageKey(4)}}><img className='icon' src={require("../../img/sepet.png")}></img></div>
         </div> 
       </div>  
     </div>
           {/* ---- */}
     <div className='views'>
-    <PageOne></PageOne>
+    {pageKey===1 && (<PageOne/>)}
+    {pageKey===2 && (<PageTwo/>)}
+    {pageKey===3 && (<PageThree/>)}
+    {pageKey===4 && (<PageSepet/>)}
     </div>
           {/* ---- */}
     <div className='food'>

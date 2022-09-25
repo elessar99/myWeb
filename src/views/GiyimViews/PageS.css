@@ -1,0 +1,47 @@
+.fullPage{
+    display: flex;
+    margin: 2em 5em 2em 5em;
+    justify-content:space-evenly;
+}
+.sepetCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 2em 0 0;
+}
+.sepetItem{
+    padding: 1em;
+    display: flex;
+}
+.itemImg{
+    padding: 0 1em 0 1em;
+    width: 6em;
+    height: 8em;
+}
+.itemInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+.itemDel{
+    border: 3px black double;
+    padding: 0.2em 0.5em;
+}
+.itemDel:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer
+}
+.sepetInfo{
+    display: flex;
+    flex-direction: column;
+}
+.sInfo{
+    padding: 0.3em;
+}
+.sInfo:hover{
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer
+}

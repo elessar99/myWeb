@@ -33,7 +33,22 @@
     background-color: black;
     color: white;
 }
-
+.nbBtnIcon{
+    font-size: 1.2em;
+    padding: 1.1em 3em 1em 3em; 
+    border-left: 2px black solid ;
+}
+.nbBtnIcon:hover{
+    background-color: red;
+    color: white;
+}
+.icon{
+    width: 2em;
+    height: 2em;
+}
+.icon:hover{
+    background-color: red;
+}
 
 .food{
     width: 100%;
