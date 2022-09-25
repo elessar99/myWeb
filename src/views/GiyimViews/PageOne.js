@@ -17,7 +17,7 @@ const PageOne = () =>{
         <div><img src={require("../../img/img m/m4.jpg")} className='oneImg'></img></div>
         
     </div>
-    <div>
+    <div className='fullcards'>
     <h2 style={{display:"flex",justifyContent:"center"}}> yeni ürünler</h2>
     <div className='cards'>
         <Card Img={require("../../img/img k/k1.jpg")}></Card>

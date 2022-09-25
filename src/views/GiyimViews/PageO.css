@@ -17,9 +17,11 @@
 .oneImg{
     max-height: 30em;
 }
-
+.fullcards{
+    background: linear-gradient(white,rgba(255,0,255,0.4), rgba(255,0,0,0.7),rgba(255,255,0,0.9));
+}
 .cards{
-    background-color: rgb(250, 250, 250);
+    
     background-size: cover ;
     margin: 0em 5em 0em 5em;
     display: flex;
@@ -31,7 +33,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: yellow;
+    background: linear-gradient(yellow, red);
     padding: 1em 1em 1em 1em;
 }
 .pageInfoText{
