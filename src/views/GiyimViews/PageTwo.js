@@ -8,18 +8,18 @@ const PageTwo = () =>{
         Erkek Modelleri
         </div>
         <div className='cardsTwo'>
-        <Card Img={require("../../img/img e/e1.jpg")}></Card>
-        <Card Img={require("../../img/img e/e2.jpg")}></Card>
-        <Card Img={require("../../img/img e/e3.jpg")}></Card>
-        <Card Img={require("../../img/img e/e4.jpg")}></Card>
-        <Card Img={require("../../img/img e/e5.jpg")}></Card>
-        <Card Img={require("../../img/img e/e6.jpg")}></Card>
-        <Card Img={require("../../img/img e/e7.jpg")}></Card>
-        <Card Img={require("../../img/img e/e8.jpg")}></Card>
-        <Card Img={require("../../img/img e/e9.jpg")}></Card>
-        <Card Img={require("../../img/img e/e10.jpg")}></Card>
-        <Card Img={require("../../img/img e/e11.jpg")}></Card>
-        <Card Img={require("../../img/img e/e12.jpg")}></Card>
+        <Card Img={process.env.REACT_APP_URL_E1}></Card>
+        <Card Img={process.env.REACT_APP_URL_E2}></Card>
+        <Card Img={process.env.REACT_APP_URL_E3}></Card>
+        <Card Img={process.env.REACT_APP_URL_E4}></Card>
+        <Card Img={process.env.REACT_APP_URL_E5}></Card>
+        <Card Img={process.env.REACT_APP_URL_E6}></Card>
+        <Card Img={process.env.REACT_APP_URL_E7}></Card>
+        <Card Img={process.env.REACT_APP_URL_E8}></Card>
+        <Card Img={process.env.REACT_APP_URL_E9}></Card>
+        <Card Img={process.env.REACT_APP_URL_E10}></Card>
+        <Card Img={process.env.REACT_APP_URL_E11}></Card>
+        <Card Img={process.env.REACT_APP_URL_E12}></Card>
 
         </div>
     </div>

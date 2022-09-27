@@ -20,18 +20,18 @@ const PageOne = () =>{
     <div className='fullcards'>
     <h2 style={{display:"flex",justifyContent:"center"}}> yeni ürünler</h2>
     <div className='cards'>
-        <Card Img={require("../../img/img k/k1.jpg")}></Card>
-        <Card Img={require("../../img/img e/e1.jpg")}></Card>
-        <Card Img={require("../../img/img k/k11.jpg")}></Card>
-        <Card Img={require("../../img/img k/k2.jpg")}></Card>
-        <Card Img={require("../../img/img k/k6.jpg")}></Card>
-        <Card Img={require("../../img/img k/k12.jpg")}></Card>
-        <Card Img={require("../../img/img e/e11.jpg")}></Card>
-        <Card Img={require("../../img/img k/k7.jpg")}></Card>
-        <Card Img={require("../../img/img e/e10.jpg")}></Card>
-        <Card Img={require("../../img/img e/e12.jpg")}></Card>
-        <Card Img={require("../../img/img k/k6.jpg")}></Card>
-        <Card Img={require("../../img/img k/k9.jpg")}></Card>
+        <Card Img={process.env.REACT_APP_URL_K1}></Card>
+        <Card Img={process.env.REACT_APP_URL_E1}></Card>
+        <Card Img={process.env.REACT_APP_URL_K11}></Card>
+        <Card Img={process.env.REACT_APP_URL_K2}></Card>
+        <Card Img={process.env.REACT_APP_URL_K6}></Card>
+        <Card Img={process.env.REACT_APP_URL_K12}></Card>
+        <Card Img={process.env.REACT_APP_URL_E11}></Card>
+        <Card Img={process.env.REACT_APP_URL_K7}></Card>
+        <Card Img={process.env.REACT_APP_URL_E10}></Card>
+        <Card Img={process.env.REACT_APP_URL_E12}></Card>
+        <Card Img={process.env.REACT_APP_URL_E6}></Card>
+        <Card Img={process.env.REACT_APP_URL_K9}></Card>
 
     </div>
     </div>

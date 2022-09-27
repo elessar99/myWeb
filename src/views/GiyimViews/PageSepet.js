@@ -14,23 +14,28 @@ const PageSepet = () =>{
         <div className='sepetFull'>
             <div className='sepetHead'>alışveriş sepetim</div>
             <hr />
-            <div className='sepetCard'>
-                <div className='sepetItem'>
-                {sepetState.items !== null &&(sepetState.items.length>0 && (sepetState.items.map((item)=>{
-                    <img className='cardImg' src={require(item)}></img>
-                })))}
-                <button onClick={()=>{
-                    console.log(sepetState.items)
-                }}>control</button>
-                    <div className='itemInfo'>
+            
+                <div className='allCards'>
+                {sepetState.items !== null && (sepetState.items.map((item)=>{
+                    return(
+                        <div className='sepetCard'>
+                        <div className='sepetItem'>
+                        <img className='itemImg' src={item}></img>
+                        <div className='itemInfo'>
                     ürün adı <br/> 120 ₺
                     </div>
+                    
                 </div>
                 <div className='itemDel'>
                     X sil
+                </div><hr />
                 </div>
-            </div>
-            <hr />
+            
+                    )
+                }))}
+                    
+                </div>
+            
             <div className='sepetInfo'>
                 <div className='sInfo' onClick={()=>{setCode(!code)}}>Bir promosyon kodu girin</div>
                 {code && (<input></input>)}
