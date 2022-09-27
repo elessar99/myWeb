@@ -1,18 +1,27 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card';
 import './PageS.css';
 const PageSepet = () =>{
     const [code, setCode] = useState(false);
     const [note, setNote] = useState(false);
+    const [sepetAll, setSepetAll] = useState([]);
+    const dispatch=useDispatch()
+    const sepetState=useSelector(state=>state.sepet)  
   return (
     <>
     <div className='fullPage'>
         <div className='sepetFull'>
-            <div>alışveriş sepetim</div>
+            <div className='sepetHead'>alışveriş sepetim</div>
             <hr />
             <div className='sepetCard'>
                 <div className='sepetItem'>
-                    <img src={require("../../img/img k/k1.jpg")} className='itemImg'></img>
+                {sepetState.items !== null &&(sepetState.items.length>0 && (sepetState.items.map((item)=>{
+                    <img className='cardImg' src={require(item)}></img>
+                })))}
+                <button onClick={()=>{
+                    console.log(sepetState.items)
+                }}>control</button>
                     <div className='itemInfo'>
                     ürün adı <br/> 120 ₺
                     </div>
@@ -30,9 +39,10 @@ const PageSepet = () =>{
             </div>
         </div>
         <div> 
-            <div>Sipariş Özeti</div>
-            <div>
-                <div>
+            <div className='sepetHead'>Sipariş Özeti</div>
+            <hr/>
+            <div className='siparisAra'>
+                <div className='araToplam'>
                     <div>
                     Ara Toplam
                     </div>
@@ -43,12 +53,13 @@ const PageSepet = () =>{
                 <div>Teslimat</div>
                 <input></input>
             </div>
-            <div>
-                <div>Toplam</div>
+            <hr />
+            <div className='toplam'>
+                <div> Toplam</div>
                 <div> 300 ₺</div>
             </div>
             <div>
-                <button>ödeme</button>
+                <div className='siparisBtn'>ödeme</div>
             </div>
         </div>
     </div>

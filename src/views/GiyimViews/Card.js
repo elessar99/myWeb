@@ -1,10 +1,25 @@
 import './Card.css';
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-const Card  = ({name,fiyat,Img}) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { setİtem } from '../../store/reducers/bestT/sepetActions';
+
+const Card  = ({name,fiyat,Img,imgSrc}) => {
+    const [sepetAll, setSepetAll] = useState([]);
+    const dispatch=useDispatch()
+    const sepetState=useSelector(state=>state.sepet)    
     return(
     <>
-    <div className='card'>
+    <div className='card' onClick={()=>{
+        if(sepetState.items != null){
+            sepetState.items.map((item)=>{
+                sepetAll.push(item)
+            })
+        }
+        sepetAll.push(Img)
+        dispatch(setİtem(sepetAll))
+        console.log(sepetState)
+    }}>
         <img className='cardImg' src={Img}></img>
         <div className='cardInfo'>{name}</div>
         <div className='cardInfo'>{fiyat}</div>

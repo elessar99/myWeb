@@ -45,3 +45,41 @@
     color: rgba(0, 0, 0, 0.5);
     cursor: pointer
 }
+.fullSiparis{
+    flex-direction: column;
+    display: flex;
+}
+.sepetHead{
+    font-size: 1.6em;
+
+}
+.siparisAra{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 6em;
+    padding: 1em 0em 1em;
+}
+.araToplam{
+    display: flex;
+    justify-content: space-between;
+}
+.toplam{
+    padding: 0.4em 0em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+.siparisBtn{
+    display: flex;
+    cursor: pointer;
+    background-color: black;
+    color: greenyellow;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 0.5em 5em ;
+}
+.siparisBtn:hover{
+    color: white;
+}

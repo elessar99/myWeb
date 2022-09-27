@@ -5,7 +5,7 @@ import PageSepet from './PageSepet';
 import PageThree from './PageThree';
 import PageTwo from './PageTwo';
 const GiyimView = () =>{
-  const [pageKey, setPageKey] = useState(2);
+  const [pageKey, setPageKey] = useState(1);
   return (
     <>
     <div className="header">
