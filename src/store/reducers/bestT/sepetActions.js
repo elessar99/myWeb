@@ -4,3 +4,9 @@ export const setİtem=(items)=>{
         payload:items
     }
 }
+export const addItem=(items)=>{
+    return{
+        type:"ADD_ITEM",
+        payload:items
+    }
+}
