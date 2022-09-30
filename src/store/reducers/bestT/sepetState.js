@@ -1,3 +1,4 @@
 export const initialState={
-    items: null
+    item:null,
+    adet:1
 }
