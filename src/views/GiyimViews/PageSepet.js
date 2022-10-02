@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { delItem, downItem } from '../../store/reducers/bestT/sepetActions';
+import { delItem, downItem, upItem } from '../../store/reducers/bestT/sepetActions';
 import Card from './Card';
 import './PageS.css';
 const PageSepet = () =>{
@@ -27,7 +27,9 @@ const PageSepet = () =>{
                     </div>
                     <div className='itemInfo'><button onClick={()=>{
                         dispatch(downItem(m.item))
-                    }}>-</button> <div style={{margin:"0.5em"}}> {m.adet} </div><button>+</button>
+                    }}>-</button> <div style={{margin:"0.5em"}}> {m.adet} </div><button onClick={()=>{
+                        dispatch(upItem(m.item))
+                    }}>+</button>
                     </div>
                 </div>
                 <div className='itemDel' onClick={()=>{
