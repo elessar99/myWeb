@@ -20,7 +20,7 @@ const PageSepet = () =>{
                     return(
                         <div className='sepetCard'>
                         <div className='sepetItem'>
-                        <img className='itemImg' src={item}></img>
+                        <img className='itemImg' src={item.itemSrc}></img>
                         <div className='itemInfo'>
                     ürün adı <br/> 120 ₺
                     </div>
