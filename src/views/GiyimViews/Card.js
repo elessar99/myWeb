@@ -2,42 +2,40 @@ import './Card.css';
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from 'react-redux';
-import { setİtem } from '../../store/reducers/bestT/sepetActions';
+import { addItem, setİtem } from '../../store/reducers/bestT/sepetActions';
 
 const Card  = ({name,fiyat,Img,imgSrc}) => {
     const items={
-        itemSrc:Img,
-        itemAdet:1,
+        item:Img,
+        adet:1,
     }
     const [tests, setTest] = useState();
-    useEffect(() => {
-        if(sepetState.items != null){
-            sepetState.items.map((item)=>{
-                console.log(item)
-                if(item.itemSrc===items.itemSrc){
-                    console.log("itemı buldum")
-                    item.itemAdet+=1;
-                    control=false;
-                }
-                    sepetAll.push(item)
-                    console.log(item,"ekledim")
-            })
-        }
-        if(control){
-        sepetAll.push(items)
-        console.log(items,"ekledimmmmmm")
-        }
-        dispatch(setİtem(sepetAll))
-        console.log(sepetState)
-    }, [tests]);
-    
     let control=true;
     const [sepetAll, setSepetAll] = useState([]);
     const dispatch=useDispatch()
     const sepetState=useSelector(state=>state.sepet)    
     return(
     <>
-    <div className='card' onClick={()=>{tests !== true? setTest(true):setTest(false)}}>
+    <div className='card' onClick={()=>{
+        console.log(sepetState,"xxssa")
+        if(sepetState !== null ){
+            console.log(("girdi"))
+          sepetState.map((m)=>{
+            if(m.item===items.item){
+                m.adet+=1;
+                control=false;
+            }
+        })  
+        }else{
+            console.log(sepetState)
+            dispatch(setİtem(items.item))
+            control=false
+        }
+        if(control){
+            dispatch(addItem(items.item))
+        }
+    
+    }}>
         <img className='cardImg' src={Img}></img>
         <div className='cardInfo'>{name}</div>
         <div className='cardInfo'>{fiyat}</div>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { delItem, downItem } from '../../store/reducers/bestT/sepetActions';
 import Card from './Card';
 import './PageS.css';
 const PageSepet = () =>{
@@ -16,17 +17,22 @@ const PageSepet = () =>{
             <hr />
             
                 <div className='allCards'>
-                {sepetState.items !== null && (sepetState.items.map((item)=>{
+                {sepetState !== null && (sepetState.map((m)=>{
                     return(
                         <div className='sepetCard'>
                         <div className='sepetItem'>
-                        <img className='itemImg' src={item.itemSrc}></img>
+                        <img className='itemImg' src={m.item}></img>
                         <div className='itemInfo'>
                     ürün adı <br/> 120 ₺
                     </div>
-                    
+                    <div className='itemInfo'><button onClick={()=>{
+                        dispatch(downItem(m.item))
+                    }}>-</button> <div style={{margin:"0.5em"}}> {m.adet} </div><button>+</button>
+                    </div>
                 </div>
-                <div className='itemDel'>
+                <div className='itemDel' onClick={()=>{
+                    dispatch(delItem(m.item))
+                }}>
                     X sil
                 </div><hr />
                 </div>
