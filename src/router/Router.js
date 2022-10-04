@@ -4,6 +4,7 @@ import "./Router.css";
 import MainView from "../views/MainView";
 import GiyimView from "../views/GiyimViews/GiyimView";
 import PageItem from "../views/GiyimViews/PageItem";
+import AnimeView from "../views/AnimeViews/AnimeView";
 
 const Router = () => {
     const routes = useRoutes(
@@ -15,6 +16,10 @@ const Router = () => {
             {
                 path: '/giyim',
                 element: <GiyimView/>
+            },
+            {
+                path:"/anime",
+                element: <AnimeView/>
             },
             {
                 path: '*',
