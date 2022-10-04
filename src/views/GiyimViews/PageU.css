@@ -1,0 +1,52 @@
+.urunAciklamasi{
+    border: 1px black solid;
+    width: 500px;
+}
+.urunImg{
+    width: 500px;
+    border: 1px black solid;
+}
+.pageUrun{
+    display: flex;
+    justify-content: center;
+    margin: 4em 0em 
+}
+.urunBlock{
+    margin: 0em 1em;
+}
+.ekleBtn{
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    color: yellow;
+    background-color: black;
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+.ekleBtn:hover{
+    color:rgb(167, 231, 46);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.ekleBtn:active{
+    background-color: white;
+    color: black;
+}
+.infoBlock{
+    padding: 1em 1em 0em 0em;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+}
+.infoS{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    user-select: none;
+}
+.infoS:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}

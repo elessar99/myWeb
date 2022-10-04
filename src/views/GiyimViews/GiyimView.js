@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setKey } from '../../store/reducers/bestT/sepetActions';
 import './Giyim.css';
+import PageItem from './PageItem';
 import PageOne from './PageOne';
 import PageSepet from './PageSepet';
 import PageThree from './PageThree';
 import PageTwo from './PageTwo';
 const GiyimView = () =>{
-  const [pageKey, setPageKey] = useState(1);
+  const dispatch=useDispatch()
+  const pageKey=useSelector(state=>state.key)
   return (
     <>
     <div className="header">
@@ -17,19 +21,20 @@ const GiyimView = () =>{
         BEST - T
         </div>        
         <div className="navBarBtns">
-          <div className='nbBtn' onClick={()=>{setPageKey(1)}}>Yeni</div>
-          <div className='nbBtn' onClick={()=>{setPageKey(2)}}>Erkek</div>
-          <div className='nbBtn' onClick={()=>{setPageKey(3)}}>Kadın</div>
-          <div className='nbBtnIcon' onClick={()=>{setPageKey(4)}}><img className='icon' src={require("../../img/sepet.png")}></img></div>
+          <div className='nbBtn' onClick={()=>{dispatch(setKey(1))}}>Yeni</div>
+          <div className='nbBtn' onClick={()=>{dispatch(setKey(2))}}>Erkek</div>
+          <div className='nbBtn' onClick={()=>{dispatch(setKey(3))}}>Kadın</div>
+          <div className='nbBtnIcon' onClick={()=>{dispatch(setKey(4))}}><img className='icon' src={require("../../img/sepet.png")}></img></div>
         </div> 
       </div>  
     </div>
           {/* ---- */}
     <div className='views'>
-    {pageKey===1 && (<PageOne/>)}
-    {pageKey===2 && (<PageTwo/>)}
-    {pageKey===3 && (<PageThree/>)}
-    {pageKey===4 && (<PageSepet/>)}
+    {pageKey.key===1 && (<PageOne/>)}
+    {pageKey.key===2 && (<PageTwo/>)}
+    {pageKey.key===3 && (<PageThree/>)}
+    {pageKey.key===4 && (<PageSepet/>)}
+    {pageKey.key===5 && (<PageItem/>)}
     </div>
           {/* ---- */}
     <div className='food'>

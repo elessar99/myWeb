@@ -3,6 +3,7 @@ import {useRoutes} from "react-router-dom"
 import "./Router.css";
 import MainView from "../views/MainView";
 import GiyimView from "../views/GiyimViews/GiyimView";
+import PageItem from "../views/GiyimViews/PageItem";
 
 const Router = () => {
     const routes = useRoutes(

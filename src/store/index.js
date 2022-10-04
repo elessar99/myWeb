@@ -3,17 +3,22 @@ import thunk from "redux-thunk";
 import logger from "redux-logger";
 import {persistReducer,persistStore} from "redux-persist";
 import storage from 'redux-persist/lib/storage'
-import itemReducer from "./reducers/bestT/sepetReducer";
+import itemReducer from "./reducers/bestT/itemReducer";
+import keyReducer from "./reducers/bestT/keyReducer";
+import sepetReducer from "./reducers/bestT/sepetReducer";
 
 const reducer=combineReducers({
-    sepet:itemReducer,
+    sepet:sepetReducer,
+    item:itemReducer,
+    key:keyReducer,
+    
 })
 const persistConfig={
     key:"root",
     storage,
     version:1,
-    whitelist:[""],
-    blacklist:["sepet"]
+    whitelist:["sepet"],
+    blacklist:["key","item"]
 }
 
 const persistedReducer=persistReducer(persistConfig,reducer)

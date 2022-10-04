@@ -1,5 +1,5 @@
 
-function itemReducer(state=null,action){
+function sepetReducer(state=null,action){
     switch (action.type) {
         case "SET_ITEM":
             return[
@@ -71,4 +71,4 @@ function itemReducer(state=null,action){
             return state
     }
 }
-export default itemReducer
+export default sepetReducer

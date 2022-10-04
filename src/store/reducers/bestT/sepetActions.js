@@ -30,3 +30,15 @@ export const downItem=(item)=>{
         payload:item
     }
 }
+export const setKey=(key)=>{
+    return{
+        type:"SET_KEY",
+        payload:key
+    }
+}
+export const setItem=(key)=>{
+    return{
+        type:"SET_ITEMX",
+        payload:key
+    }
+}
