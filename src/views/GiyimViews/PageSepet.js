@@ -6,6 +6,8 @@ import './PageS.css';
 const PageSepet = () =>{
     const [code, setCode] = useState(false);
     const [note, setNote] = useState(false);
+    const [testimat, setTestimat] = useState(0);
+    let adet=0;
     const [sepetAll, setSepetAll] = useState([]);
     const dispatch=useDispatch()
     const sepetState=useSelector(state=>state.sepet)  
@@ -18,6 +20,7 @@ const PageSepet = () =>{
             
                 <div className='allCards'>
                 {sepetState !== null && (sepetState.map((m)=>{
+                    adet+=m.adet
                     return(
                         <div className='sepetCard'>
                         <div className='sepetItem'>
@@ -60,19 +63,30 @@ const PageSepet = () =>{
                     Ara Toplam
                     </div>
                     <div>
-                    300,00₺
+                    {adet*120},00₺
                     </div>
                 </div>
-                <div>Teslimat</div>
-                <input></input>
+                <label>Testimat bölgesi</label>
+                <select onChange={(e)=>{
+                    console.log(e.target)
+                        setTestimat(e.target.value)
+                }}>
+                    <option value={20}>Ankara</option>
+                    <option value={30}>İzmir</option>
+                    <option value={10}>İstanbul</option>
+                    <option value={40}>Antalya</option>
+                    <option value={0} selected>...</option>
+                </select>
             </div>
             <hr />
             <div className='toplam'>
                 <div> Toplam</div>
-                <div> 300 ₺</div>
+                <div> {adet*120 + testimat*1} ₺</div>
             </div>
             <div>
-                <div className='siparisBtn'>ödeme</div>
+                <div className='siparisBtn' onClick={()=>{
+                    alert("şuanda sistem calışmamaktadır!!!")
+                }}>ödeme</div>
             </div>
         </div>
     </div>
