@@ -1,12 +1,19 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { addItem, setİtem } from '../../store/reducers/bestT/sepetActions';
 import './PageU.css';
 const PageItem = () =>{
     const dispatch = useDispatch();
     const [bilgi, setBilgi] = useState(true);
     const [para, setPara] = useState(false);
     const [gonderim, setGonderim] = useState(false);
-    const itemState=useSelector(state=>state.item)  
+    const itemState=useSelector(state=>state.item) 
+    const items={
+        item:itemState.itemSrc,
+        adet:1,
+    }
+    let control=true;
+    const sepetState=useSelector(state=>state.sepet)  
   return (
     <><div className='pageUrun'>
     <div className='urunBlock'>
@@ -24,9 +31,27 @@ const PageItem = () =>{
     <div className='urunBlock'>
         <div>
         <h1>Ürün Adı</h1>
+        <hr/>
         <p>Ürün Kodu: 000</p>
         <p style={{fontSize:"2em"}}>120 ₺</p>
-        <div className='ekleBtn'>Sepete Ekle</div>
+        <div className='ekleBtn' onClick={()=>{
+        if(sepetState !== null ){
+            console.log(("girdi"))
+          sepetState.map((m)=>{
+            if(m.item===items.item){
+                m.adet+=1;
+                control=false;
+            }
+        })  
+        }else{
+            console.log(sepetState)
+            dispatch(setİtem(items.item))
+            control=false
+        }
+        if(control){
+            dispatch(addItem(items.item))
+        }
+        }}>Sepete Ekle</div>
         </div>
         <div>
             <div className='infoBlock' onClick={()=>{
@@ -59,9 +84,60 @@ const PageItem = () =>{
                 </p></div> )}
             </div>    
             <hr/>
-            <div></div>
+            <div className='infoBlock' onClick={()=>{
+                if(para){
+                    setPara(false)
+                }
+                else{
+                    setBilgi(false)
+                    setGonderim(false)
+                    setPara(true)
+                }
+            }}>
+                <div className='infoS'>
+                    <div>ÜRÜN VE PARA İADE POLİTİKASI</div>
+                    <div>
+                        {!para&&(<div style={{fontSize:"1.5em"}}>⋙</div>)}
+                        {para&&(<div style={{fontSize:"1.5em"}}>⋘</div>)}
+                    </div>
+                </div>
+                {para&&(<div><p>Bu, bir Ürün ve Para İadesi Politikası. Burası,<br/>
+                müşterilerinizin aldıkları ürünlerden memnun<br/>
+                kalmamaları durumunda ne yapmaları gerektiğini<br/>
+                anlatmak için harika bir yer. Güven yaratmak ve<br/>
+                müşterileri rahatça alışveriş yapabileceklerine ikna<br/>
+                etmek için net bir iade veya değişim politikanızın<br/>
+                olması gerekir.<br/>
+
+                </p></div> )}
+            </div> 
             <hr/>
-            <div></div>
+            <div className='infoBlock' onClick={()=>{
+                if(gonderim){
+                    setGonderim(false)
+                }
+                else{
+                    setBilgi(false)
+                    setGonderim(true)
+                    setPara(false)
+                }
+            }}>
+                <div className='infoS'>
+                    <div>GÖNDERİM BİLGİSİ</div>
+                    <div>
+                        {!gonderim&&(<div style={{fontSize:"1.5em"}}>⋙</div>)}
+                        {gonderim&&(<div style={{fontSize:"1.5em"}}>⋘</div>)}
+                    </div>
+                </div>
+                {gonderim&&(<div><p>Bu, bir gönderim bilgisi. Burası, gönderim<br/>
+                    yöntemleri, paketleme ve ücretleriniz hakkında<br/>
+                    daha fazla bilgi vermek için harika bir yer. Güven<br/>
+                    oluşturmak ve müşterilerinizi sizden rahatça<br/>
+                    alışveriş yapabileceklerine ikna etmek için<br/>
+                    gönderim politikanız hakkında net bilgi vermeniz<br/>
+                    gereklidir.<br/>
+                </p></div> )}
+            </div> 
         </div>
     </div>
     </div></>
