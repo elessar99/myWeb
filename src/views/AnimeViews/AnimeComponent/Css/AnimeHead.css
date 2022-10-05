@@ -1,0 +1,11 @@
+.animeHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 1.6em;
+    margin: auto;
+    margin-top: 1em;
+    max-width: 1600px;
+    min-width: 1000px;
+}
