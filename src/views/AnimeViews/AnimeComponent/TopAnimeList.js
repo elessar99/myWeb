@@ -15,11 +15,12 @@ const TopAnimeList = () =>{
       <div className="aFullTopAnime">
       <Swiper
         freeMode={true}
+        loop={true}
         slidesPerView={4}
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 55000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{

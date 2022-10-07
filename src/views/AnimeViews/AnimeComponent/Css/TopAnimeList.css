@@ -1,6 +1,8 @@
 .aFullTopAnime{
     max-width: 1000px;
     margin: auto;
+    backdrop-filter: blur(8px);
+    padding: 1em;
 }
 .swiper {
     width: 100%;
@@ -9,6 +11,7 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
+    padding: 0 0 2em 0;
   
     /* Center slide text vertically */
     display: -webkit-box;
