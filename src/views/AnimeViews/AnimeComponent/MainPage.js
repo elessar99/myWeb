@@ -1,6 +1,7 @@
 const MainPage = () =>{
     return (
       <>
+      <div>sadas</div>
       </>
     );
   }

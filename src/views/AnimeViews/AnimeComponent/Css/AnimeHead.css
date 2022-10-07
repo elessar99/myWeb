@@ -1,11 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 .animeHead{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: red;
-    height: 1.6em;
+    justify-content: space-around;
     margin: auto;
-    margin-top: 1em;
-    max-width: 1600px;
-    min-width: 1000px;
+}
+.aHeadBtn{
+    color: #F9931E;
+    font-size: 1.2em;
+    padding: 48px 0 0 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+.aLogoImg{
+    margin: -1em 0 0 0;
+    height: 10em;
+}
+.aLogReg{
+    font-size: 1.4em;
+    padding: 44px 5px 0 0;
+    color: #F25A28;
+    font-family: 'Gloria Hallelujah', cursive;
 }
