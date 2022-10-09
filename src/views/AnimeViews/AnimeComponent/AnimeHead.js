@@ -10,7 +10,14 @@ const AnimeHead = () =>{
             <div>myAnime</div>
         </div>
         <div className="aLogReg">
-          <div>login/register</div>
+          <div style={{display:"flex"}}>
+            <div className="aLogRegBtn">
+              giriş yap
+            </div>
+            <div className="aLogRegBtn">
+              üye ol
+            </div>
+          </div>
           {false&&(<div>user</div>)}
         </div>
       </div>

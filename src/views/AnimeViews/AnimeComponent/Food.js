@@ -1,9 +1,12 @@
-const Food = () =>{
+const FoodAnime = () =>{
   return (
     <>
+    <div>
+      food
+    </div>
     </>
   );
 }
 
-export default Food ;
+export default FoodAnime ;
 

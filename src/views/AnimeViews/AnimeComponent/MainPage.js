@@ -1,7 +1,23 @@
+import AnimeCard from "./AnimeCard";
+import "./Css/AnimeMainPage.css"
+
 const MainPage = () =>{
     return (
       <>
-      <div>sadas</div>
+      <div className="aMainPage">
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+        <AnimeCard/>
+      </div>
       </>
     );
   }

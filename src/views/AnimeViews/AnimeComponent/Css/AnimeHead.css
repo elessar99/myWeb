@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     margin: auto;
+    user-select: none;
 }
 .aHeadBtn{
     color: #F9931E;
@@ -18,8 +19,25 @@
     height: 10em;
 }
 .aLogReg{
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 44px 5px 0 0;
     color: #F25A28;
     font-family: 'Gloria Hallelujah', cursive;
+}
+.aLogRegBtn{
+    margin:0 0.2em;
+    font-weight: bold;
+    padding: 0 1em 0.3em 1.2em;
+    border: 3px #F9931E solid ;
+    border-radius: 5px 40px;
+    backdrop-filter: blur(20px);
+}
+.aLogRegBtn:hover{
+    backdrop-filter: blur(5px);
+    color: #F9931E;
+    border: 3px #F25A28 dotted;
+}
+.aLogRegBtn:active{
+    border: 3px #F25A28 solid;
+    backdrop-filter: blur(20px);
 }

@@ -1,5 +1,7 @@
 import AnimeCard from './AnimeComponent/AnimeCard';
 import AnimeHead from './AnimeComponent/AnimeHead';
+import FoodAnime from './AnimeComponent/Food';
+import MainPage from './AnimeComponent/MainPage';
 import TopAnimeList from './AnimeComponent/TopAnimeList';
 import './AnimeView.css';
 const AnimeView = () =>{
@@ -8,12 +10,10 @@ const AnimeView = () =>{
     <div className="fullAnimePage">
     <AnimeHead></AnimeHead>
     <TopAnimeList/>
-      <div className='mainPage'>
-
-        <AnimeCard/>
-      </div>
+    <div><MainPage/></div>
       <div>2</div>
     </div>
+    <div><FoodAnime/></div>
     </>
   );
 }
