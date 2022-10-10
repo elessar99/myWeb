@@ -6,11 +6,13 @@ import storage from 'redux-persist/lib/storage'
 import itemReducer from "./reducers/bestT/itemReducer";
 import keyReducer from "./reducers/bestT/keyReducer";
 import sepetReducer from "./reducers/bestT/sepetReducer";
+import animeReducer from "./reducers/AnimeReducer/animeReducer";
 
 const reducer=combineReducers({
     sepet:sepetReducer,
     item:itemReducer,
     key:keyReducer,
+    animeType:animeReducer,
     
 })
 const persistConfig={
@@ -18,7 +20,7 @@ const persistConfig={
     storage,
     version:1,
     whitelist:["sepet"],
-    blacklist:["key","item"]
+    blacklist:["key","item",]
 }
 
 const persistedReducer=persistReducer(persistConfig,reducer)

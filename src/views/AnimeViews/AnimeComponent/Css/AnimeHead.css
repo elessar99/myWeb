@@ -41,3 +41,23 @@
     border: 3px #F25A28 solid;
     backdrop-filter: blur(20px);
 }
+.animeTypeDropDown{
+    visibility: hidden;
+    position: absolute;
+    padding: 0.2em 0.3em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0px 30px;
+    color: #F25A28;
+    border: 3px #F9931E solid;
+    z-index: 99;
+    text-align: center;
+}
+.aDropDownBtns:hover{
+    color: #F9931E;
+}
+.aDropDownBtns:active{
+    opacity: 0.8;
+}
+.show{
+    visibility: visible;
+}
