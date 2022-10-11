@@ -1,4 +1,4 @@
-export const aksiyonState=[
+export const animeListState=[
     {
         animeSrc:process.env.REACT_APP_URL_A1,
         animeName:"Akame ga Kill!"
@@ -24,12 +24,24 @@ export const aksiyonState=[
         animeName:"Sword Art Online"
     },
     {
+        animeSrc:process.env.REACT_APP_URL_A7,
+        animeName:"Tensei Shitara Slime Datta Ken"
+    },
+    {
         animeSrc:process.env.REACT_APP_URL_A8,
         animeName:"Overlord"
     },
     {
         animeSrc:process.env.REACT_APP_URL_A9,
         animeName:"One-Punch Man"
+    },
+    {
+        animeSrc:process.env.REACT_APP_URL_A10,
+        animeName:"No Game No Life"
+    },
+    {
+        animeSrc:process.env.REACT_APP_URL_A11,
+        animeName:"Gin Tama"
     },
     {
         animeSrc:process.env.REACT_APP_URL_A12,
@@ -44,6 +56,18 @@ export const aksiyonState=[
         animeName:"Attack on Titan"
     },
     {
+        animeSrc:process.env.REACT_APP_URL_A15,
+        animeName:"Angel Beats!"
+    },
+    {
+        animeSrc:process.env.REACT_APP_URL_A16,
+        animeName:"Dr. Stone"
+    },
+    {
+        animeSrc:process.env.REACT_APP_URL_A17,
+        animeName:"The Devil is a Part-Timer!"
+    },
+    {
         animeSrc:process.env.REACT_APP_URL_A18,
         animeName:"The Misfit of Demon King Academy"
     },
@@ -52,8 +76,16 @@ export const aksiyonState=[
         animeName:"Date A Live"
     },
     {
+        animeSrc:process.env.REACT_APP_URL_A20,
+        animeName:"Dagashi Kashi"
+    },
+    {
         animeSrc:process.env.REACT_APP_URL_A21,
         animeName:"D.Gray-man"
+    },
+    {
+        animeSrc:process.env.REACT_APP_URL_A22,
+        animeName:"Kuroshitsuji"
     },
     
     

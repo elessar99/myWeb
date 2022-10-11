@@ -1,7 +1,8 @@
+import { aksiyonState } from "../../../store/reducers/AnimeReducer/AksiyonState"
 
 import "./Css/TypeAnime.css"
 
-const AnimeType = () =>{
+const AksiyonAnime = () =>{
     return (
       <>
       <div className="aTypePage">
@@ -11,6 +12,6 @@ const AnimeType = () =>{
     );
   }
   
-  export default AnimeType ;
+  export default AksiyonAnime ;
   
   

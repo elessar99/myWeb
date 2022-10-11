@@ -1,14 +1,17 @@
-// import { dogaustuState } from "./DogaustuState"
-// import { komediState } from "./KomediState"
-// import { aksiyonState } from "./AksiyonState"
-// function animeReducer(state=null,dState=dogaustuState,kState=komediState,aState=aksiyonState,action){
+import { dogaustuState } from "./DogaustuState"
+import { komediState } from "./KomediState"
+import { aksiyonState } from "./AksiyonState"
+// function animeReducer(state=null,action){
 //     switch (action.type) {
 //         case "SET_AKSIYON":
-//             return aState
+//             state=action.payload
+//             return {anime:"key02"}
 //         case "SET_DOGA":
-//             return dState
+//             state=action.payload
+//             return state
 //         case "SET_KOMEDI":
-//             return kState
+//             state=action.payload
+//             return state
 //         default:
 //             return state
 //     }

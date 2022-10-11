@@ -1,16 +1,27 @@
 import "./Css/AnimeCard.css"
-const AnimeCard = () =>{
+import PropTypes from "prop-types";
+const AnimeCard = ({name,src}) =>{
     return (
       <>
       <div className="aFullCard">
-        <img className="aCardImg" src={require("../img/attackontitan.jpg")}></img>
+        <img className="aCardImg" src={src}></img>
         <div className="aCardInfo">
-        shingeki no kyojin
+        {name}
         </div>
       </div>
       </>
     );
   }
+  AnimeCard.propTypes = {
+    src: PropTypes.string,
+    name: PropTypes.string,
+
+
+}
+AnimeCard.defaultProps = {
+    src: "",
+    name: "anime adı",
+}
   
   export default AnimeCard ;
   

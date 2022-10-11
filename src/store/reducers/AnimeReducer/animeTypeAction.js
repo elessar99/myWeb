@@ -1,18 +1,24 @@
+
+import { dogaustuState } from "./DogaustuState"
+import { komediState } from "./KomediState"
+import { aksiyonState } from "./AksiyonState"
+
+
 export const setAksiton=()=>{
     return{
         type:"SET_AKSIYON",
-        payload:"Aksiyon"
+        payload:aksiyonState
     }
 }
 export const setKomedi=()=>{
     return{
         type:"SET_KOMEDI",
-        payload:"Komedi"
+        payload:"komediState"
     }
 }
 export const setDoga=()=>{
     return{
         type:"SET_DOGA",
-        payload:"Dogaustu"
+        payload:dogaustuState
     }
 }

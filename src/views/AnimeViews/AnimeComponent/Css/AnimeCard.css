@@ -1,4 +1,5 @@
 .aFullCard{
+    display: flex;
     flex-direction: column;
     align-items: center;
     display: flex;
@@ -20,6 +21,7 @@
     box-shadow: -5px -5px 10px 0px red;
 }
 .aCardInfo{
+    width: 180px;
     text-align: center;
     padding: 0.5em;
 }

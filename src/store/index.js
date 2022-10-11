@@ -12,7 +12,7 @@ const reducer=combineReducers({
     sepet:sepetReducer,
     item:itemReducer,
     key:keyReducer,
-    animeType:animeReducer,
+
     
 })
 const persistConfig={
