@@ -22,3 +22,9 @@ export const setDoga=()=>{
         payload:dogaustuState
     }
 }
+export const setAnimeKey=(key)=>{
+    return{
+        type:"SET_A_KEY",
+        payload:key
+    }
+}

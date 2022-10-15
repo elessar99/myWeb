@@ -13,11 +13,14 @@ import KomediAnime from './AnimeComponent/KomediAnime';
 import { useState } from 'react';
 const AnimeView = () =>{
   const [key, setKey] = useState(1);
+  
   return (
     <>
     <div className="fullAnimePage">
-    <AnimeHead></AnimeHead>
-    <TopAnimeList/>
+    <AnimeHead onPageChange={(pKey)=>{
+      setKey(pKey)
+    }}></AnimeHead>
+    {/* <TopAnimeList/> */}
     {key===1&&(<div><MainPage/></div>)}
     {key===2&&(<div><AksiyonAnime/></div>)}
     {key===3&&(<div><DogaAnime/></div>)}

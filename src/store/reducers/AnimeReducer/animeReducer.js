@@ -1,19 +1,18 @@
 import { dogaustuState } from "./DogaustuState"
 import { komediState } from "./KomediState"
 import { aksiyonState } from "./AksiyonState"
-// function animeReducer(state=null,action){
-//     switch (action.type) {
-//         case "SET_AKSIYON":
-//             state=action.payload
-//             return {anime:"key02"}
-//         case "SET_DOGA":
-//             state=action.payload
-//             return state
-//         case "SET_KOMEDI":
-//             state=action.payload
-//             return state
-//         default:
-//             return state
-//     }
-// }
-// export default animeReducer
+
+const initialState={
+    key: 1
+}
+
+
+function animeKeyReducer(state=initialState,action){
+    switch (action.type) {
+        case "SET_A_KEY":
+            return {key:2}
+        default:
+            return state
+    }
+}
+export default animeKeyReducer

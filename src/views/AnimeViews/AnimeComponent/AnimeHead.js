@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setAksiton, setKomedi } from "../../../store/reducers/AnimeReducer/animeTypeAction";
+import { setAksiton, setAnimeKey, setKomedi } from "../../../store/reducers/AnimeReducer/animeTypeAction";
 import { useClickOutside } from "../useClickOutside";
 
 
@@ -8,9 +8,9 @@ import { dogaustuState } from "../../../store/reducers/AnimeReducer/DogaustuStat
 import { komediState } from "../../../store/reducers/AnimeReducer/KomediState"
 import { aksiyonState } from "../../../store/reducers/AnimeReducer/AksiyonState"
 
-
+import PropTypes from "prop-types";
 import "./Css/AnimeHead.css"
-const AnimeHead = () =>{
+const AnimeHead = ({onPageChange}) =>{
   const handleClick = useCallback(()=>{
     setDropDown((c)=> !c)
   },[])
@@ -22,14 +22,14 @@ const AnimeHead = () =>{
     return (
       <>
       <div className="animeHead">
-        <div className="aLogo"><img className="aLogoImg" src={require("../img/logo/animeLogo.png")}></img></div>
+        <div className="aLogo" onClick={()=>{onPageChange(1)}}><img className="aLogoImg" src={require("../img/logo/animeLogo.png")}></img></div>
         <div className="aHeadBtn">
             <div ref={refDropdown}>
             <div onClick={handleClick}>anime türleri</div>
               <div className={dropDown ? "animeTypeDropDown show":"animeTypeDropDown"}>
-                <div className="aDropDownBtns" onClick={()=>{console.log(aksiyonState)}}>Aksiyon</div>
-                <div className="aDropDownBtns" onClick={()=>{console.log(dogaustuState)}}>Doğaüstü Güç</div>
-                <div className="aDropDownBtns" onClick={()=>{console.log(komediState)}}>Komedi</div>
+                <div className="aDropDownBtns" onClick={()=>{onPageChange(2)}}>Aksiyon</div>
+                <div className="aDropDownBtns" onClick={()=>{onPageChange(3)}}>Doğaüstü Güç</div>
+                <div className="aDropDownBtns" onClick={()=>{onPageChange(4)}}>Komedi</div>
               </div>
             </div>
             <div>anime haber</div>
@@ -50,6 +50,14 @@ const AnimeHead = () =>{
       </>
     );
   }
+  AnimeHead.propTypes = {
+    onPageChange: PropTypes.func,
+
+
+}
+AnimeHead.defaultProps = {
+    onPageChange: ()=> null,
+}
   
   export default AnimeHead ;
   
