@@ -12,16 +12,13 @@ const reducer=combineReducers({
     sepet:sepetReducer,
     item:itemReducer,
     key:keyReducer,
-    aKey:animeKeyReducer,
-
-    
 })
 const persistConfig={
     key:"root",
     storage,
     version:1,
     whitelist:["sepet"],
-    blacklist:["key","item","aKey"]
+    blacklist:["key","item",]
 }
 
 const persistedReducer=persistReducer(persistConfig,reducer)
