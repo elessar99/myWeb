@@ -20,7 +20,7 @@ const AnimeView = () =>{
     <AnimeHead onPageChange={(pKey)=>{
       setKey(pKey)
     }}></AnimeHead>
-    {/* <TopAnimeList/> */}
+    <TopAnimeList/>
     {key===1&&(<div><MainPage/></div>)}
     {key===2&&(<div><AksiyonAnime/></div>)}
     {key===3&&(<div><DogaAnime/></div>)}
