@@ -10,7 +10,7 @@ import { aksiyonState } from "../../../store/reducers/AnimeReducer/AksiyonState"
 
 import PropTypes from "prop-types";
 import "./Css/AnimeHead.css"
-const AnimeHead = ({onPageChange}) =>{
+const AnimeHead = ({onPageChange,onLogReg}) =>{
   const handleClick = useCallback(()=>{
     setDropDown((c)=> !c)
   },[])
@@ -37,10 +37,10 @@ const AnimeHead = ({onPageChange}) =>{
         </div>
         <div className="aLogReg">
           <div style={{display:"flex"}}>
-            <div className="aLogRegBtn">
+            <div className="aLogRegBtn" onClick={()=>{onLogReg(1)}}>
               giriş yap
             </div>
-            <div className="aLogRegBtn">
+            <div className="aLogRegBtn" onClick={()=>{onLogReg(2)}}>
               üye ol
             </div>
           </div>
@@ -52,11 +52,13 @@ const AnimeHead = ({onPageChange}) =>{
   }
   AnimeHead.propTypes = {
     onPageChange: PropTypes.func,
+    onLogReg: PropTypes.func,
 
 
 }
 AnimeHead.defaultProps = {
     onPageChange: ()=> null,
+    onLogReg:  ()=> null,
 }
   
   export default AnimeHead ;

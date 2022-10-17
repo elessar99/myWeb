@@ -10,14 +10,23 @@ import './AnimeView.css';
 import AksiyonAnime from './AnimeComponent/AksiyonAnime';
 import DogaAnime from './AnimeComponent/DogaAnime';
 import KomediAnime from './AnimeComponent/KomediAnime';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Popup from './AnimeComponent/Popup';
 const AnimeView = () =>{
   const [key, setKey] = useState(1);
+  const [logRegKey, setLogRegKey] = useState(0);
+  const [control, setControl] = useState(true);
   
   return (
     <>
+    {control &&(<Popup onPageChange={logRegKey}/>)}
+    {!control &&(<Popup onPageChange={logRegKey}/>)}
     <div className="fullAnimePage">
-    <AnimeHead onPageChange={(pKey)=>{
+    <AnimeHead onLogReg={(i)=>{
+      setLogRegKey(i)
+      setControl(!control)
+    }}
+    onPageChange={(pKey)=>{
       setKey(pKey)
     }}></AnimeHead>
     <TopAnimeList/>

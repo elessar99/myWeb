@@ -49,7 +49,7 @@
     border-radius: 0px 30px;
     color: #F25A28;
     border: 3px #F9931E solid;
-    z-index: 99;
+    z-index: 9;
     text-align: center;
 }
 .aDropDownBtns:hover{
