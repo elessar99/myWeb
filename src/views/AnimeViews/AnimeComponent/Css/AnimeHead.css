@@ -61,3 +61,96 @@
 .show{
     visibility: visible;
 }
+
+.iconBody{
+    padding-bottom: 1em ;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.iconImg{
+    width: 3.5em;
+    border-radius: 20px 5px;
+}
+.animeMenuDropDown{
+    visibility: hidden;
+    position: absolute;
+    top: 6em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0px 30px;
+    color: #F25A28;
+    border: 3px #F9931E solid;
+    z-index: 9;
+    text-align: center;
+    width: 200px;
+    height: 350px;
+}
+
+.animeTypeDropDownMenu{
+    font-family: 'Gloria Hallelujah', cursive;
+    backdrop-filter: blur(20px);
+    visibility: hidden;
+    position: absolute;
+    right: 12.8em;
+    width: 150px;
+    top: 9.3em;
+    padding: 0.2em 0.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0px 30px;
+    color: #F25A28;
+    border: 3px #F9931E solid;
+    z-index: 9;
+    text-align: center;
+}
+.aDropDownBtns:hover{
+    color: #F9931E;
+}
+.aDropDownBtns:active{
+    opacity: 0.8;
+}
+.show{
+    visibility: visible;
+}
+
+.aLogRegBtnMenu{
+    margin: 0.5em 0.3em;
+    font-weight: bold;
+    padding: 0.5em 1em 0.5em 1.2em;
+    border: 3px #F9931E solid ;
+    border-radius: 5px 40px;
+    backdrop-filter: blur(20px);
+}
+.aLogRegBtnMenu:hover{
+    backdrop-filter: blur(5px);
+    color: #F9931E;
+    border: 3px #F25A28 dotted;
+}
+.aLogRegBtnMenu:active{
+    border: 3px #F25A28 solid;
+    backdrop-filter: blur(20px);
+}
+.aMenuBtn{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1em;
+    margin: 0.5em 0.3em;
+    font-weight: bold;
+    padding: 0.5em 1em 0.5em 1.2em;
+    border: 3px #F9931E solid ;
+    border-radius: 5px 40px;
+    backdrop-filter: blur(20px);
+}
+
+
+
+
+@media screen and (max-width: 875px) {
+    .aLogReg{
+        display: none;
+    }
+    .aHeadBtn{
+        display: none;
+    }
+    .iconBody{
+        display: flex;
+    }
+}
