@@ -1,0 +1,8 @@
+.fullTakvim{
+    font-size: 1.4em;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    background: linear-gradient( rgba(40,40,40,0.9),black);
+    color: rgb(200, 0, 0);
+}

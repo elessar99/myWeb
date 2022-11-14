@@ -14,9 +14,22 @@
     width: 400px;
     justify-content: space-between;
 }
+.aHeadBtns{
+    cursor: pointer;
+}
+.aHeadBtns:active{
+    opacity: 0.8;
+}
 .aLogoImg{
     margin: -1em 0 0 0;
     height: 10em;
+    cursor: pointer;
+}
+.aLogoImg:hover{
+    opacity: 0.8;
+}
+.aLogoImg:active{
+    opacity: 0.5;
 }
 .aLogReg{
     font-size: 1.2em;
@@ -33,6 +46,7 @@
     backdrop-filter: blur(20px);
 }
 .aLogRegBtn:hover{
+    cursor: pointer;
     backdrop-filter: blur(5px);
     color: #F9931E;
     border: 3px #F25A28 dotted;

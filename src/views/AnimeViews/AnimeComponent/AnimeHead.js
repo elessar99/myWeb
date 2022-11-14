@@ -23,11 +23,12 @@ const AnimeHead = ({onPageChange,onLogReg}) =>{
   const animeState=useSelector(state=>state.animeType)
   const dispatch = useDispatch
   const refDropdown = useRef(null);
+  const refDropdown3 = useRef(null);
   const [dropDown, setDropDown] = useState(false);
   const [dropDown2, setDropDown2] = useState(false);
   const [dropDown3, setDropDown3] = useState(false);
   useClickOutside(refDropdown, ()=> setDropDown(false));
-  useClickOutside(refDropdown, ()=> setDropDown3(false));
+  useClickOutside(refDropdown3, ()=> setDropDown3(false));
     return (
       <>
       <div className="animeHead">
@@ -35,15 +36,15 @@ const AnimeHead = ({onPageChange,onLogReg}) =>{
         
         <div className="aHeadBtn">
             <div ref={refDropdown}>
-            <div onClick={handleClick}>anime türleri</div>
+            <div onClick={handleClick} className="aHeadBtns">anime türleri</div>
               <div className={dropDown ? "animeTypeDropDown show":"animeTypeDropDown"}>
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(2)}}>Aksiyon</div>
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(3)}}>Doğaüstü Güç</div>
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(4)}}>Komedi</div>
               </div>
             </div>
-            <div>anime haber</div>
-            <div>myAnime</div>
+            <div className="aHeadBtns">anime haber</div>
+            <div className="aHeadBtns">myAnime</div>
         </div>
         <div className="aLogReg">
           <div style={{display:"flex"}}>
@@ -75,7 +76,7 @@ const AnimeHead = ({onPageChange,onLogReg}) =>{
                     {false&&(<div>user</div>)}
                 </div>
               </div>
-              <div ref={refDropdown}>
+              <div ref={refDropdown3}>
             <div onClick={handleClick3} className="aMenuBtn" style={{marginTop:"2em"}}>anime türleri</div>
               <div className={dropDown3 ? "animeTypeDropDownMenu show":"animeTypeDropDownMenu"}>
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(2)}}>Aksiyon</div>

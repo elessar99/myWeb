@@ -12,7 +12,13 @@ import DogaAnime from './AnimeComponent/DogaAnime';
 import KomediAnime from './AnimeComponent/KomediAnime';
 import { useEffect, useState } from 'react';
 import Popup from './AnimeComponent/Popup';
+import AnimeTakvim from './AnimeComponent/AnimeTakvim';
+import AnimePage from './AnimeComponent/AnimePage';
+import { aksiyonState } from "../../store/reducers/AnimeReducer/AksiyonState"
+
 const AnimeView = () =>{
+  const [animeSrc, setAnimeSrc] = useState();
+  const [animeName, setAnimeName] = useState();
   const [key, setKey] = useState(1);
   const [logRegKey, setLogRegKey] = useState(0);
   const [control, setControl] = useState(true);
@@ -29,12 +35,50 @@ const AnimeView = () =>{
     onPageChange={(pKey)=>{
       setKey(pKey)
     }}></AnimeHead>
-    <TopAnimeList/>
-    {key===1&&(<div><MainPage/></div>)}
-    {key===2&&(<div><AksiyonAnime/></div>)}
-    {key===3&&(<div><DogaAnime/></div>)}
-    {key===4&&(<div><KomediAnime/></div>)}
+  
+    <TopAnimeList  nameChange={(aName)=>{
+        setAnimeName(aName)
+      }} srcChange={(aSrc)=>{
+        setAnimeSrc(aSrc)
+      }} onPageChange={(MPKey)=>{
+      setKey(5)
+    }}
+   />
+    {key===1&&(<div><MainPage nameChange={(aName)=>{
+        setAnimeName(aName)
+      }} srcChange={(aSrc)=>{
+        setAnimeSrc(aSrc)
+      }} onPageChange={(MPKey)=>{
+      setKey(5)
+    }}
+    /></div>)}
+    {key===2&&(<div><AksiyonAnime nameChange={(aName)=>{
+        setAnimeName(aName)
+      }} srcChange={(aSrc)=>{
+        setAnimeSrc(aSrc)
+      }} onPageChange={(MPKey)=>{
+      setKey(5)
+    }}
+   /></div>)}
+    {key===3&&(<div><DogaAnime nameChange={(aName)=>{
+        setAnimeName(aName)
+      }} srcChange={(aSrc)=>{
+        setAnimeSrc(aSrc)
+      }} onPageChange={(MPKey)=>{
+      setKey(5)
+    }}
+   /></div>)}
+    {key===4&&(<div><KomediAnime nameChange={(aName)=>{
+        setAnimeName(aName)
+      }} srcChange={(aSrc)=>{
+        setAnimeSrc(aSrc)
+      }} onPageChange={(MPKey)=>{
+      setKey(5)
+    }}
+   /></div>)}
+    {key===5&&(<AnimePage name={animeName} src={animeSrc}/>)}
     </div>
+    <AnimeTakvim/>
     <div><FoodAnime/></div>
     </>
   );

@@ -2,9 +2,9 @@ import AnimeCard from "./AnimeCard";
 import "./Css/AnimeMainPage.css"
 import { animeListState } from "../../../store/reducers/AnimeReducer/AnimeListState"
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-
-const MainPage = () =>{
+const MainPage = ({onPageChange,nameChange,srcChange}) =>{
   let counter = 0;
   const [pageKey, setPageKey] = useState(1);
   const [state, setstate] = useState(animeListState);
@@ -16,12 +16,12 @@ const MainPage = () =>{
             counter++;
             if(counter<17 && pageKey===1){
               return(
-              <AnimeCard name={item.animeName} src={item.animeSrc}/>
+              <AnimeCard onPageChange={(i)=>{onPageChange(i)}} nameChange={(j)=>{nameChange(j)}} srcChange={(k)=>{srcChange(k)}} name={item.animeName} src={item.animeSrc}/>
               )
             }
             else if (counter>16 && pageKey===2){
               return(
-              <AnimeCard name={item.animeName} src={item.animeSrc}/>
+              <AnimeCard onPageChange={(i)=>{onPageChange(i)}} nameChange={(j)=>{nameChange(j)}} srcChange={(k)=>{srcChange(k)}} name={item.animeName} src={item.animeSrc}/>
               )
             }
                    
@@ -35,6 +35,17 @@ const MainPage = () =>{
       </>
     );
   }
+  MainPage.propTypes = {
+    onPageChange: PropTypes.func,
+    nameChange: PropTypes.func,
+    srcChange: PropTypes.func,
+  }
+  MainPage.defaultProps = {
+    onPageChange: ()=>5,
+    nameChange: ()=>null,
+    srcChange: ()=>null,
+  }
+  
   
   export default MainPage ;
   
