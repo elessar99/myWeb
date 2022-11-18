@@ -77,11 +77,13 @@ const PageSepet = () =>{
                     <option value={40}>Antalya</option>
                     <option value={0} selected>...</option>
                 </select>
+                <div>indirim {adet*48}</div>
             </div>
             <hr />
             <div className='toplam'>
                 <div> Toplam</div>
-                <div> {adet*120 + testimat*1} ₺</div>
+                {adet*120<800 && (<div> {adet*120 + testimat*1} ₺</div>)}
+                {!(adet*120<800) && (<div> {adet*72 + testimat*1} ₺</div>)}
             </div>
             <div>
                 <div className='siparisBtn' onClick={()=>{

@@ -39,7 +39,7 @@ const PageOne = () =>{
         <div className='pageInfoText'>
             <div style={{fontSize:"5em",padding:"0.5em"}}>dev indirim</div>
             <div style={{fontSize:"2em",padding:"0.5em"}}>800 ₺ üstü alışverişe</div>
-            <div style={{fontSize:"3em",padding:"0.5em"}}>%35 indirim</div>
+            <div style={{fontSize:"3em",padding:"0.5em"}}>%40 indirim</div>
         </div>
         <div><img src={require("../../img/img m/m6.jpg")}></img></div>
     </div>
