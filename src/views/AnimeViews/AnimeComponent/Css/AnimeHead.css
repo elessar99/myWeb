@@ -15,7 +15,11 @@
     justify-content: space-between;
 }
 .aHeadBtns{
+    text-decoration: none;
     cursor: pointer;
+}
+.aHeadBtns:visited{
+    color: #F9931E;
 }
 .aHeadBtns:active{
     opacity: 0.8;
@@ -144,6 +148,7 @@
     backdrop-filter: blur(20px);
 }
 .aMenuBtn{
+    cursor: pointer;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 1em;
     margin: 0.5em 0.3em;
@@ -153,8 +158,22 @@
     border-radius: 5px 40px;
     backdrop-filter: blur(20px);
 }
-
-
+.aMenuBtnA{
+    display: block;
+    cursor: pointer;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1em;
+    margin: 0.5em 0.3em;
+    font-weight: bold;
+    padding: 0.5em 1em 0.5em 1.2em;
+    border: 3px #F9931E solid ;
+    border-radius: 5px 40px;
+    backdrop-filter: blur(20px);
+    text-decoration: none;
+}
+.aMenuBtnA:visited{
+    color: #F25A28;
+}
 
 
 @media screen and (max-width: 875px) {

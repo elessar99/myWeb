@@ -16,11 +16,6 @@ const FoodAnime = () =>{
           <div>Hakkımızda</div>
           <div>E-Mail</div>
           <div>Discord</div>
-          <div style={{display:"flex"}}>
-            <div style={{marginRight:"2em"}}> I </div>
-            <div style={{marginRight:"2em"}}> Y </div>
-            <div style={{marginRight:"2em"}}> F </div>
-          </div>
         </div>
       </div>
       <div className="aFoodThree">

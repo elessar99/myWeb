@@ -43,8 +43,8 @@ const AnimeHead = ({onPageChange,onLogReg}) =>{
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(4)}}>Komedi</div>
               </div>
             </div>
-            <div className="aHeadBtns">anime haber</div>
-            <div className="aHeadBtns">myAnime</div>
+            <a href="https://yeppuu.com/" target="blank" className="aHeadBtns">anime haber</a>
+            <a href="https://myanimelist.net/" target="blank" className="aHeadBtns">myAnime</a>
         </div>
         <div className="aLogReg">
           <div style={{display:"flex"}}>
@@ -83,8 +83,8 @@ const AnimeHead = ({onPageChange,onLogReg}) =>{
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(3)}}>Doğaüstü Güç</div>
                 <div className="aDropDownBtns" onClick={()=>{onPageChange(4)}}>Komedi</div>
               </div>
-              <div className="aMenuBtn" >anime haber</div>
-            <div className="aMenuBtn" >myAnime</div>
+            <a className="aMenuBtnA" href="https://myanimelist.net/" target="blank">anime haber</a>
+            <a className="aMenuBtnA" href="https://myanimelist.net/" target="blank">myAnime</a>
             </div>
               </div>
         </div>
